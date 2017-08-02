@@ -28,6 +28,10 @@ class CarousalMessage(Message):
 
     def __init__(self):
         Message.__init__(self, "carousel")
+        self.elements = []
+
+    def add_carousal_element(self, element):
+        self.elements.extend(element)
 
 
 class CarousalElement:
