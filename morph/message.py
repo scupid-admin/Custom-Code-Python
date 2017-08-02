@@ -34,6 +34,12 @@ class CarousalMessage(Message):
         self.elements.extend(element)
 
 
+class ListMessage(CarousalMessage):
+    def __init__(self):
+        CarousalMessage.__init__(self)
+        self.cover = True
+
+
 class CarousalElement:
     def __init__(self, title, sub_title, image_url, click_url):
         self.image_url = image_url
