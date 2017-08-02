@@ -31,8 +31,15 @@ class CarousalMessage(Message):
 
 
 class CarousalElement:
-    def __init__(self):
-        pass
+    def __init__(self, title, sub_title, image_url, click_url):
+        self.image_url = image_url
+        self.sub_title = sub_title
+        self.title = title
+        self.click_url = click_url
+        self.buttons = []
+
+    def add_button(self, button):
+        self.buttons.extend(button)
 
 
 class Button:
