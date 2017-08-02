@@ -17,3 +17,7 @@ class SetVariable(Action):
 class Publish(Action):
     def __init__(self):
         Action.__init__(self, name="publish")
+        self.messages = []
+
+    def add_message(self, message):
+        self.messages.extend(message)
