@@ -38,6 +38,14 @@ class ListMessage(CarousalMessage):
     def __init__(self):
         CarousalMessage.__init__(self)
         self.cover = True
+        self.message_type = "list"
+
+
+class MediaMessage(Message):
+    def __init__(self, media_url, media_type):
+        Message.__init__(self, "media")
+        self.media_url = media_url
+        self.media_type = media_type
 
 
 class CarousalElement:
