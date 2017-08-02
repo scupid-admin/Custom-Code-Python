@@ -48,6 +48,16 @@ class MediaMessage(Message):
         self.media_type = media_type
 
 
+class TextMessage(Message):
+    def __init__(self, text):
+        Message.__init__(self, "statement")
+        self.text = text
+        self.buttons = []
+
+    def add_button(self, button):
+        self.buttons.extend(button)
+
+
 class CarousalElement:
     def __init__(self, title, sub_title, image_url, click_url):
         self.image_url = image_url
