@@ -4,3 +4,6 @@ class Response:
 
     def add_action(self, action):
         self.actions.extend(action)
+
+    def build(self):
+        pass
