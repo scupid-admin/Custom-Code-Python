@@ -1,3 +1,6 @@
+import json
+
+
 class Action:
     def __init__(self, name):
         self.name = name
@@ -8,6 +11,10 @@ class GoToFlow(Action):
         Action.__init__(self, name="goToFlow")
         self.flow_title = flow_title
 
+    def to_json(self):
+        attr = {'name': self.name, 'nextFlowTitle': self.flow_title}
+        return json.dumps(attr)
+
 
 class SetVariable(Action):
     def __init__(self, variable_scope, variable_title, variable):
@@ -15,6 +22,11 @@ class SetVariable(Action):
         self.variable_scope = variable_scope
         self.variable_title = variable_title
         self.variable = variable
+
+    def to_json(self):
+        attr = {'name': self.name, 'variableScope': self.variable_scope, 'variableTitle': self.variable_title,
+                'variable': self.variable.to_json()}
+        return json.dumps(attr)
 
 
 class Publish(Action):
