@@ -33,6 +33,11 @@ class CarousalMessage(Message):
     def add_carousal_element(self, element):
         self.elements.extend(element)
 
+    def to_json(self):
+        attr = {'messageType': self.message_type}
+        if len(self.elements) > 0:
+            attr['suggestionElements'] = [element.to_json for element in self.elements]
+
 
 class ListMessage(CarousalMessage):
     def __init__(self):
