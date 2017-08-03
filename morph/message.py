@@ -35,8 +35,9 @@ class CarousalMessage(Message):
 
     def to_json(self):
         attr = {'messageType': self.message_type}
-        if len(self.elements) > 0:
-            attr['suggestionElements'] = [element.to_json for element in self.elements]
+        if len(self.suggestions) > 0:
+            attr['suggestionElements'] = [suggestion.to_json() for suggestion in self.suggestions]
+        attr['carousalElements'] = [element.to_json() for element in self.elements]
 
 
 class ListMessage(CarousalMessage):
