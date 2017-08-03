@@ -79,6 +79,12 @@ class CarousalElement:
     def add_button(self, button):
         self.buttons.extend(button)
 
+    def to_json(self):
+        attr = {'title': self.title, 'subtitle': self.sub_title, 'imageUrl': self.image_url, 'clickUrl': self.click_url}
+        if len(self.buttons) > 0:
+            attr['buttons'] = [button.to_json() for button in self.buttons]
+        return json.dumps(attr)
+
 
 class Button:
     def __init__(self, title, button_type):
