@@ -102,6 +102,7 @@ class URLButton(Button):
         attr = {'buttonType': self.button_type, 'webviewHeightRatio': self.height, 'url': self.url, 'title': self.title}
         return json.dumps(attr)
 
+
 class Suggestion:
     """
     Represents a suggestion, aka quick replies
@@ -120,3 +121,8 @@ class Suggestion:
         self.payload = payload
         self.suggestion_type = suggestion_type
         self.title = title
+
+    def to_json(self):
+        attr = {'title': self.title, 'suggestionType': self.suggestion_type, 'payload': self.payload,
+                'imageUrl': self.imageUrl}
+        return json.dumps(attr)
