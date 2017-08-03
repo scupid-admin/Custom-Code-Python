@@ -1,3 +1,6 @@
+import json
+
+
 class Message:
     """
     Represents a single message to be sent
@@ -38,6 +41,7 @@ class CarousalMessage(Message):
         if len(self.suggestions) > 0:
             attr['suggestionElements'] = [suggestion.to_json() for suggestion in self.suggestions]
         attr['carousalElements'] = [element.to_json() for element in self.elements]
+        return json.dumps(attr)
 
 
 class ListMessage(CarousalMessage):
