@@ -98,6 +98,9 @@ class URLButton(Button):
         self.height = height
         self.url = url
 
+    def to_json(self):
+        attr = {'buttonType': self.button_type, 'webviewHeightRatio': self.height, 'url': self.url, 'title': self.title}
+        return json.dumps(attr)
 
 class Suggestion:
     """
