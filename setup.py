@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="morph",
+    name="morph-ai",
     packages=['morph'],
     description='Morph.ai Custom code SDK for python',
     author="Ishan Jain",
