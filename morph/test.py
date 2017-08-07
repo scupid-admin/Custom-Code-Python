@@ -3,4 +3,3 @@ from morph.action import GoToFlow
 
 response = Response()
 response.add_action(GoToFlow("My Conversation"))
-return response.build()
