@@ -1,7 +1,9 @@
 import json
+import abc
 
 
 class Message:
+    __metaclass__ = abc.ABCMeta
     """
     Represents a single message to be sent
     """
@@ -22,6 +24,15 @@ class Message:
         """
         self.suggestions.append(suggestion)
         return self
+
+    @abc.abstractmethod
+    def to_json(self):
+        """to_json should be implementated by all"""
+        return
+
+    def add_suggestions_to_attr(self, attr):
+        if len(self.suggestions) > 0:
+            attr['suggestionElements'] = [suggestion.to_json() for suggestion in self.suggestions]
 
 
 class CarousalMessage(Message):
@@ -57,6 +68,9 @@ class MediaMessage(Message):
         self.media_url = media_url
         self.media_type = media_type
 
+    def to_json(self):
+        pass
+
 
 class TextMessage(Message):
     def __init__(self, text):
@@ -66,6 +80,12 @@ class TextMessage(Message):
 
     def add_button(self, button):
         self.buttons.extend(button)
+
+    def to_json(self):
+        attr = {'text': self.text}
+        if len(self.buttons) > 0:
+            attr['buttons'] = [button.to_json() for button in self.buttons]
+        return json.dumps(attr)
 
 
 class CarousalElement:
