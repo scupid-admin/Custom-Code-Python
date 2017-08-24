@@ -7,7 +7,7 @@ class Response(MorphSerializable):
         self.actions = []
 
     def add_action(self, action):
-        self.actions.extend(action)
+        self.actions.append(action)
         return self
 
     def build(self):
