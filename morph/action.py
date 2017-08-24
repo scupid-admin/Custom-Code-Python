@@ -35,7 +35,7 @@ class Publish(Action):
         self.messages = []
 
     def add_message(self, message):
-        self.messages.extend(message)
+        self.messages.append(message)
 
     def to_json(self):
         attr = {'name': self.name, 'simplifiedMessage': [message.to_json() for message in self.messages]}

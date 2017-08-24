@@ -20,7 +20,7 @@ class Message:
         :param suggestion: Suggestion type.
         :return: self
         """
-        self.suggestions.extend(suggestion)
+        self.suggestions.append(suggestion)
         return self
 
 

@@ -59,3 +59,5 @@ def media(event, context):
     media_message = MediaMessage(media_url="http://morph.ai/logo.jpeg", media_type="image")
     publish_action.add_message(media_message)
     return Response().add_action(publish_action).build()
+
+text_payload(None, None)
