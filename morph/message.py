@@ -53,7 +53,7 @@ class CarousalMessage(Message):
             attr['suggestionElements'] = [suggestion.to_json() for suggestion in self.suggestions]
         attr['carousalElements'] = [element.to_json() for element in self.elements]
         self.add_suggestions_to_attr(attr)
-        return json.dumps(attr)
+        return attr
 
 
 class ListMessage(CarousalMessage):
@@ -72,7 +72,7 @@ class MediaMessage(Message):
     def to_json(self):
         attr = {'messageType': self.message_type, 'mediaUrl': self.media_url, 'mediaType': self.message_type}
         self.add_suggestions_to_attr(attr)
-        return json.dumps(attr)
+        return attr
 
 
 class TextMessage(Message):
@@ -89,7 +89,7 @@ class TextMessage(Message):
         if len(self.buttons) > 0:
             attr['buttons'] = [button.to_json() for button in self.buttons]
         self.add_suggestions_to_attr(attr)
-        return json.dumps(attr)
+        return attr
 
 
 class CarousalElement:
@@ -107,7 +107,7 @@ class CarousalElement:
         attr = {'title': self.title, 'subtitle': self.sub_title, 'imageUrl': self.image_url, 'clickUrl': self.click_url}
         if len(self.buttons) > 0:
             attr['buttons'] = [button.to_json() for button in self.buttons]
-        return json.dumps(attr)
+        return attr
 
 
 class Button:
@@ -124,7 +124,7 @@ class URLButton(Button):
 
     def to_json(self):
         attr = {'buttonType': self.button_type, 'webviewHeightRatio': self.height, 'url': self.url, 'title': self.title}
-        return json.dumps(attr)
+        return attr
 
 
 class Suggestion:
@@ -149,4 +149,4 @@ class Suggestion:
     def to_json(self):
         attr = {'title': self.title, 'suggestionType': self.suggestion_type, 'payload': self.payload,
                 'imageUrl': self.imageUrl}
-        return json.dumps(attr)
+        return attr
