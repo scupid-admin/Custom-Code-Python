@@ -1,3 +1,4 @@
+import json
 from morph.base import MorphSerializable
 
 
@@ -11,4 +12,5 @@ class Response(MorphSerializable):
         return self
 
     def build(self):
-        pass
+        attr = {'actions': [action.to_json() for action in self.actions]}
+        return json.dumps(attr)

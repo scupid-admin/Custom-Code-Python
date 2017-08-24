@@ -62,6 +62,6 @@ def media(event, context):
 
 
 read_and_set_attribute(None, {"userVariables": {"_PHONE_NUMBER": "9711xxx400"}})
-text_payload(None, None)
+print(text_payload(None, None))
 carousal(None, None)
 media(None, None)
