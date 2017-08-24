@@ -52,6 +52,7 @@ class CarousalMessage(Message):
         if len(self.suggestions) > 0:
             attr['suggestionElements'] = [suggestion.to_json() for suggestion in self.suggestions]
         attr['carousalElements'] = [element.to_json() for element in self.elements]
+        self.add_suggestions_to_attr(attr)
         return json.dumps(attr)
 
 
@@ -69,7 +70,9 @@ class MediaMessage(Message):
         self.media_type = media_type
 
     def to_json(self):
-        pass
+        attr = {'messageType': self.message_type, 'mediaUrl': self.media_url, 'mediaType': self.message_type}
+        self.add_suggestions_to_attr(attr)
+        return json.dumps(attr)
 
 
 class TextMessage(Message):
@@ -85,6 +88,7 @@ class TextMessage(Message):
         attr = {'text': self.text}
         if len(self.buttons) > 0:
             attr['buttons'] = [button.to_json() for button in self.buttons]
+        self.add_suggestions_to_attr(attr)
         return json.dumps(attr)
 
 
