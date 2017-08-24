@@ -34,7 +34,7 @@ class CarousalMessage(Message):
         self.elements = []
 
     def add_carousal_element(self, element):
-        self.elements.extend(element)
+        self.elements.append(element)
 
     def to_json(self):
         attr = {'messageType': self.message_type}
@@ -77,7 +77,7 @@ class CarousalElement:
         self.buttons = []
 
     def add_button(self, button):
-        self.buttons.extend(button)
+        self.buttons.append(button)
 
     def to_json(self):
         attr = {'title': self.title, 'subtitle': self.sub_title, 'imageUrl': self.image_url, 'clickUrl': self.click_url}

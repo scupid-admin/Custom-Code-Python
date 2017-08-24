@@ -60,4 +60,8 @@ def media(event, context):
     publish_action.add_message(media_message)
     return Response().add_action(publish_action).build()
 
+
+read_and_set_attribute(None, {"userVariables": {"_PHONE_NUMBER": "9711xxx400"}})
 text_payload(None, None)
+carousal(None, None)
+media(None, None)
