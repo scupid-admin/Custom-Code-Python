@@ -13,7 +13,7 @@ class StringVariable(Variable):
 
     def to_json(self):
         attr = {'variableType': self.type, 'value': self.value}
-        return json.dumps(attr)
+        return attr
 
 
 class StringArrayVariable(Variable):
@@ -23,7 +23,7 @@ class StringArrayVariable(Variable):
 
     def to_json(self):
         attr = {'variableType': self.type, 'values': self.values}
-        return json.dumps(attr)
+        return attr
 
 
 class NumberVariable(Variable):
@@ -33,4 +33,4 @@ class NumberVariable(Variable):
 
     def to_json(self):
         attr = {'variableType': self.type, 'value': self.value}
-        return json.dumps(attr)
+        return attr
