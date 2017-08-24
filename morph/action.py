@@ -13,7 +13,7 @@ class GoToFlow(Action):
 
     def to_json(self):
         attr = {'name': self.name, 'nextFlowTitle': self.flow_title}
-        return json.dumps(attr)
+        return attr
 
 
 class SetVariable(Action):
@@ -26,7 +26,7 @@ class SetVariable(Action):
     def to_json(self):
         attr = {'name': self.name, 'variableScope': self.variable_scope, 'variableTitle': self.variable_title,
                 'variable': self.variable.to_json()}
-        return json.dumps(attr)
+        return attr
 
 
 class Publish(Action):
@@ -39,4 +39,4 @@ class Publish(Action):
 
     def to_json(self):
         attr = {'name': self.name, 'simplifiedMessage': [message.to_json() for message in self.messages]}
-        return json.dumps(attr)
+        return attr
