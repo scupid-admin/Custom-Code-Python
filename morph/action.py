@@ -39,5 +39,5 @@ class Publish(Action):
 
     def to_json(self):
         # attr = {'name': self.name, 'simplifiedMessage': [message.to_json() for message in self.messages]}
-        attr = {'name': self.name, 'messages': [message.to_json() for message in self.messages]}
+        attr = {'name': self.name, 'simplifiedMessage': {'messages': [message.to_json() for message in self.messages]}}
         return attr
