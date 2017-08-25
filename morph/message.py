@@ -85,7 +85,7 @@ class TextMessage(Message):
         self.buttons.extend(button)
 
     def to_json(self):
-        attr = {'text': self.text}
+        attr = {'text': self.text, 'messageType': self.message_type}
         if len(self.buttons) > 0:
             attr['buttons'] = [button.to_json() for button in self.buttons]
         self.add_suggestions_to_attr(attr)
