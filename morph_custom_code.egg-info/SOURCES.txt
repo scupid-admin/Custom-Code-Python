@@ -1,5 +1,0 @@
-setup.py
-morph_custom_code.egg-info/PKG-INFO
-morph_custom_code.egg-info/SOURCES.txt
-morph_custom_code.egg-info/dependency_links.txt
-morph_custom_code.egg-info/top_level.txt
