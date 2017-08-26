@@ -1,3 +1,4 @@
+import sphinx_bootstrap_theme
 # -*- coding: utf-8 -*-
 #
 # morph-ai documentation build configuration file, created by
@@ -83,6 +84,8 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
