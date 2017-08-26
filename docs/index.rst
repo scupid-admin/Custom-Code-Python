@@ -10,6 +10,7 @@ This contains the documentation of Morph.ai python sdk
    :maxdepth: 2
 
    License
+   morph
 
 
 
