@@ -1,14 +1,15 @@
-.. morph-ao documentation master file, created by
-   sphinx-quickstart on Sat Aug 26 17:18:35 2017.
+.. morph-ai documentation master file, created by
+   sphinx-quickstart on Sat Aug 26 17:22:28 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to morph-ao's documentation!
-====================================
+This contains the documentation of Morph.ai python sdk
+======================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   License
 
 
 

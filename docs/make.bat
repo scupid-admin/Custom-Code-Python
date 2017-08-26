@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=morph-ao
+set SPHINXPROJ=morph-ai
 
 if "%1" == "" goto help
 
