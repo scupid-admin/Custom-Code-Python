@@ -1,13 +1,35 @@
-import json
+"""
+Your code basically returns a list of actions. This is the goal of your code.
+
+There are 3 type of Actions that you can add.
+1) GoToFlow - Used for jumping to a conversation
+2) SetVariable - Used for setting an attribute
+3) Publish - Used to reply back to the user
+
+Actions are executed in the order that you send them.
+"""
 
 
 class Action:
+    """
+    Base class for Action
+    """
+
     def __init__(self, name):
         self.name = name
 
 
 class GoToFlow(Action):
+    """
+    Use this Action when you want to jump to a conversation
+    """
+
     def __init__(self, flow_title):
+        """
+        Parameters
+        -------------
+        flow_title: str;
+        """
         Action.__init__(self, name="goToFlow")
         self.flow_title = flow_title
 
