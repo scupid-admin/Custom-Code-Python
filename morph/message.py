@@ -27,7 +27,7 @@ class Message:
 
     @abc.abstractmethod
     def to_json(self):
-        """to_json should be implementated by all"""
+        """to_json should be implemented by all"""
         return
 
     def add_suggestions_to_attr(self, attr):
