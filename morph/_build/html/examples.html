@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>&lt;no title&gt; &#8212; morph-ai  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>from morph.response import Response
+from morph.action import *
+from morph.variable import *
+from morph.message import *</p>
+<dl class="docutils">
+<dt>def read_and_set_attribute(event, context):</dt>
+<dd><p class="first">response = Response()</p>
+<dl class="docutils">
+<dt>number_dict = {</dt>
+<dd>“9711xxx400”: True,
+“8130xxx599”: True</dd>
+</dl>
+<p>}
+phone_number = context[“userVariables”][“_PHONE_NUMBER”]
+if phone_number is None:</p>
+<blockquote>
+<div>phone_number = “”</div></blockquote>
+<dl class="docutils">
+<dt>else:</dt>
+<dd>phone_number = str(phone_number)</dd>
+<dt>if phone_number in number_dict.keys():</dt>
+<dd># This is creating a variable. Variables can be of different kinds. See variable.py. They can be
+# StringVariable, NumberVariable, StringArrayVariable
+#
+# variable_scope can be either USER or FLOW
+variable = SetVariable(variable_scope=”USER”, variable_title=”Valid Customer”, variable=StringVariable(“true”))
+response.add_action(variable)</dd>
+<dt>else:</dt>
+<dd># This redirects user to a new conversation called “number invalid”
+response.add_action(GoToFlow(“number invalid”))</dd>
+</dl>
+<p class="last">return response.build()</p>
+</dd>
+<dt>def text_payload(event, context):</dt>
+<dd><p class="first">publish_action = Publish()
+text_message = TextMessage(“Hello, please select options from below.”)
+complaint_suggestion = Suggestion(“File a complain”, “TEXT”, “complaint”, None)
+demo_suggestion = Suggestion(“Schedule a demo”, “TEXT”, “demo”, None)
+text_message.add_suggestion(complaint_suggestion)
+text_message.add_suggestion(demo_suggestion)
+publish_action.add_message(text_message)</p>
+<p class="last">return Response().add_action(publish_action).build()</p>
+</dd>
+<dt>def carousal(event, context):</dt>
+<dd><p class="first">publish_action = Publish()
+carousal_message = CarousalMessage()
+element = CarousalElement(title=”Morph.ai”, sub_title=”Experience the best”,</p>
+<blockquote>
+<div>image_url=”<a class="reference external" href="http://www.morph.ai/logo.jpg">http://www.morph.ai/logo.jpg</a>”, click_url=”<a class="reference external" href="http://www.morph.ai">http://www.morph.ai</a>”)</div></blockquote>
+<p>element.add_button(button=URLButton(title=”Signup”, url=”app.morph.ai”, height=”TALL”))
+carousal_message.add_carousal_element(</p>
+<blockquote>
+<div>element)</div></blockquote>
+<p class="last">publish_action.add_message(carousal_message)
+return Response().add_action(publish_action).build()</p>
+</dd>
+<dt>def media(event, context):</dt>
+<dd>publish_action = Publish()
+media_message = MediaMessage(media_url=”<a class="reference external" href="http://morph.ai/logo.jpeg">http://morph.ai/logo.jpeg</a>”, media_type=”image”)
+publish_action.add_message(media_message)
+return Response().add_action(publish_action).build()</dd>
+</dl>
+<p>print(read_and_set_attribute(None, {“userVariables”: {“_PHONE_NUMBER”: “9711xxx400”}}))
+print(text_payload(None, None))
+print(carousal(None, None))
+print(media(None, None))</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">morph-ai</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Ishan Jain.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/examples.py.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

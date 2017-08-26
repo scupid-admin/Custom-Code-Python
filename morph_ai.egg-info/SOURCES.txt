@@ -1,0 +1,15 @@
+setup.py
+morph/__init__.py
+morph/action.py
+morph/base.py
+morph/examples.py
+morph/json_serializer.py
+morph/message.py
+morph/response.py
+morph/test.py
+morph/utils.py
+morph/variable.py
+morph_ai.egg-info/PKG-INFO
+morph_ai.egg-info/SOURCES.txt
+morph_ai.egg-info/dependency_links.txt
+morph_ai.egg-info/top_level.txt

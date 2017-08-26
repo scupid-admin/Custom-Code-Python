@@ -1,0 +1,376 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module message</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>message</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/ishanjain/workspace/morph-python-sdk/morph/message.py">/Users/ishanjain/workspace/morph-python-sdk/morph/message.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="abc.html">abc</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="message.html#Message">Message</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="message.html#CarousalMessage">CarousalMessage</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="message.html#ListMessage">ListMessage</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="message.html#MediaMessage">MediaMessage</a>
+</font></dt><dt><font face="helvetica, arial"><a href="message.html#TextMessage">TextMessage</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="message.html#Button">Button</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="message.html#URLButton">URLButton</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="message.html#CarousalElement">CarousalElement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="message.html#Suggestion">Suggestion</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Button">class <strong>Button</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Button-__init__"><strong>__init__</strong></a>(self, title, button_type)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CarousalElement">class <strong>CarousalElement</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CarousalElement-__init__"><strong>__init__</strong></a>(self, title, sub_title, image_url, click_url)</dt></dl>
+
+<dl><dt><a name="CarousalElement-add_button"><strong>add_button</strong></a>(self, button)</dt></dl>
+
+<dl><dt><a name="CarousalElement-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CarousalMessage">class <strong>CarousalMessage</strong></a>(<a href="message.html#Message">Message</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Represents&nbsp;a&nbsp;carousal&nbsp;message<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="message.html#CarousalMessage">CarousalMessage</a></dd>
+<dd><a href="message.html#Message">Message</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="CarousalMessage-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CarousalMessage-add_carousal_element"><strong>add_carousal_element</strong></a>(self, element)</dt></dl>
+
+<dl><dt><a name="CarousalMessage-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset([])</dl>
+
+<hr>
+Methods inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><a name="CarousalMessage-add_suggestion"><strong>add_suggestion</strong></a>(self, suggestion)</dt><dd><tt>Adds&nbsp;a&nbsp;suggestion&nbsp;to&nbsp;this&nbsp;message<br>
+:param&nbsp;suggestion:&nbsp;<a href="#Suggestion">Suggestion</a>&nbsp;type.<br>
+:return:&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="CarousalMessage-add_suggestions_to_attr"><strong>add_suggestions_to_attr</strong></a>(self, attr)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ListMessage">class <strong>ListMessage</strong></a>(<a href="message.html#CarousalMessage">CarousalMessage</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="message.html#ListMessage">ListMessage</a></dd>
+<dd><a href="message.html#CarousalMessage">CarousalMessage</a></dd>
+<dd><a href="message.html#Message">Message</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ListMessage-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset([])</dl>
+
+<hr>
+Methods inherited from <a href="message.html#CarousalMessage">CarousalMessage</a>:<br>
+<dl><dt><a name="ListMessage-add_carousal_element"><strong>add_carousal_element</strong></a>(self, element)</dt></dl>
+
+<dl><dt><a name="ListMessage-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><a name="ListMessage-add_suggestion"><strong>add_suggestion</strong></a>(self, suggestion)</dt><dd><tt>Adds&nbsp;a&nbsp;suggestion&nbsp;to&nbsp;this&nbsp;message<br>
+:param&nbsp;suggestion:&nbsp;<a href="#Suggestion">Suggestion</a>&nbsp;type.<br>
+:return:&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="ListMessage-add_suggestions_to_attr"><strong>add_suggestions_to_attr</strong></a>(self, attr)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MediaMessage">class <strong>MediaMessage</strong></a>(<a href="message.html#Message">Message</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="message.html#MediaMessage">MediaMessage</a></dd>
+<dd><a href="message.html#Message">Message</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MediaMessage-__init__"><strong>__init__</strong></a>(self, media_url, media_type)</dt></dl>
+
+<dl><dt><a name="MediaMessage-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset([])</dl>
+
+<hr>
+Methods inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><a name="MediaMessage-add_suggestion"><strong>add_suggestion</strong></a>(self, suggestion)</dt><dd><tt>Adds&nbsp;a&nbsp;suggestion&nbsp;to&nbsp;this&nbsp;message<br>
+:param&nbsp;suggestion:&nbsp;<a href="#Suggestion">Suggestion</a>&nbsp;type.<br>
+:return:&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="MediaMessage-add_suggestions_to_attr"><strong>add_suggestions_to_attr</strong></a>(self, attr)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Message">class <strong>Message</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Message-__init__"><strong>__init__</strong></a>(self, message_type)</dt><dd><tt>Parameters<br>
+:param&nbsp;message_type:&nbsp;str;&nbsp;one&nbsp;of&nbsp;statement,&nbsp;carousel,&nbsp;list,&nbsp;media</tt></dd></dl>
+
+<dl><dt><a name="Message-add_suggestion"><strong>add_suggestion</strong></a>(self, suggestion)</dt><dd><tt>Adds&nbsp;a&nbsp;suggestion&nbsp;to&nbsp;this&nbsp;message<br>
+:param&nbsp;suggestion:&nbsp;<a href="#Suggestion">Suggestion</a>&nbsp;type.<br>
+:return:&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="Message-add_suggestions_to_attr"><strong>add_suggestions_to_attr</strong></a>(self, attr)</dt></dl>
+
+<dl><dt><a name="Message-to_json"><strong>to_json</strong></a>(self)</dt><dd><tt>to_json&nbsp;should&nbsp;be&nbsp;implemented&nbsp;by&nbsp;all</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset(['to_json'])</dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Suggestion">class <strong>Suggestion</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Represents&nbsp;a&nbsp;suggestion,&nbsp;aka&nbsp;quick&nbsp;replies<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Suggestion-__init__"><strong>__init__</strong></a>(self, title, suggestion_type, payload, image_url)</dt><dd><tt>Constructor<br>
+&nbsp;<br>
+:param&nbsp;title:&nbsp;str,&nbsp;The&nbsp;title&nbsp;of&nbsp;the&nbsp;suggestion<br>
+:param&nbsp;suggestion_type:&nbsp;str,&nbsp;One&nbsp;of&nbsp;LOCATION&nbsp;or&nbsp;TEXT<br>
+:param&nbsp;payload:&nbsp;str,&nbsp;The&nbsp;payload&nbsp;to&nbsp;be&nbsp;sent&nbsp;when&nbsp;someone&nbsp;clicks&nbsp;it<br>
+:param&nbsp;image_url:&nbsp;str,&nbsp;The&nbsp;URL&nbsp;of&nbsp;the&nbsp;logo&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="Suggestion-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TextMessage">class <strong>TextMessage</strong></a>(<a href="message.html#Message">Message</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="message.html#TextMessage">TextMessage</a></dd>
+<dd><a href="message.html#Message">Message</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TextMessage-__init__"><strong>__init__</strong></a>(self, text)</dt></dl>
+
+<dl><dt><a name="TextMessage-add_button"><strong>add_button</strong></a>(self, button)</dt></dl>
+
+<dl><dt><a name="TextMessage-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset([])</dl>
+
+<hr>
+Methods inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><a name="TextMessage-add_suggestion"><strong>add_suggestion</strong></a>(self, suggestion)</dt><dd><tt>Adds&nbsp;a&nbsp;suggestion&nbsp;to&nbsp;this&nbsp;message<br>
+:param&nbsp;suggestion:&nbsp;<a href="#Suggestion">Suggestion</a>&nbsp;type.<br>
+:return:&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="TextMessage-add_suggestions_to_attr"><strong>add_suggestions_to_attr</strong></a>(self, attr)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="message.html#Message">Message</a>:<br>
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="URLButton">class <strong>URLButton</strong></a>(<a href="message.html#Button">Button</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="URLButton-__init__"><strong>__init__</strong></a>(self, title, url, height)</dt></dl>
+
+<dl><dt><a name="URLButton-to_json"><strong>to_json</strong></a>(self)</dt></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
