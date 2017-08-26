@@ -4,7 +4,7 @@ morph package
 Submodules
 ----------
 
-morph\.action module
+action
 --------------------
 
 .. automodule:: morph.action
@@ -12,37 +12,6 @@ morph\.action module
     :undoc-members:
     :show-inheritance:
 
-morph\.base module
-------------------
-
-.. automodule:: morph.base
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-morph\.examples module
-----------------------
-
-.. automodule:: morph.examples
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-morph\.index module
--------------------
-
-.. automodule:: morph.index
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-morph\.json\_serializer module
-------------------------------
-
-.. automodule:: morph.json_serializer
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 morph\.message module
 ---------------------
@@ -60,13 +29,6 @@ morph\.response module
     :undoc-members:
     :show-inheritance:
 
-morph\.test module
-------------------
-
-.. automodule:: morph.test
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 morph\.variable module
 ----------------------
