@@ -1,4 +1,3 @@
-import json
 import abc
 
 
@@ -124,6 +123,26 @@ class URLButton(Button):
 
     def to_json(self):
         attr = {'buttonType': self.button_type, 'webviewHeightRatio': self.height, 'url': self.url, 'title': self.title}
+        return attr
+
+
+class PostbackButton(Button):
+    """
+    Represents a payload button. When clicked the message sent will be the payload passed
+    """
+
+    def __init__(self, title, payload):
+        """
+        Constructor
+
+        :param title: The title of the button
+        :param payload: The payload passed when user clicks on this button
+        """
+        Button.__init__(self, title, "POSTBACK")
+        self.payload = payload
+
+    def to_json(self):
+        attr = {'buttonType': self.button_type, 'payload': self.payload, 'title': self.title}
         return attr
 
 
