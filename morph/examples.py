@@ -11,7 +11,7 @@ def read_and_set_attribute(event, context):
         "9711xxx400": True,
         "8130xxx599": True
     }
-    phone_number = context["userVariables"]["_PHONE_NUMBER"]
+    phone_number = event["userVariables"]["_PHONE_NUMBER"]
     if phone_number is None:
         phone_number = ""
     else:
