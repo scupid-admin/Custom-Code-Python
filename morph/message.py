@@ -92,7 +92,7 @@ class TextMessage(Message):
 
 
 class CarousalElement:
-    def __init__(self, title, sub_title, image_url, click_url):
+    def __init__(self, title, sub_title, image_url=None, click_url=None):
         self.image_url = image_url
         self.sub_title = sub_title
         self.title = title
@@ -151,7 +151,7 @@ class Suggestion:
     Represents a suggestion, aka quick replies
     """
 
-    def __init__(self, title, suggestion_type, payload, image_url):
+    def __init__(self, title, suggestion_type, payload, image_url=None):
         """
         Constructor
 
