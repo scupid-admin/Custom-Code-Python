@@ -46,10 +46,17 @@ def carousal(event, context):
     publish_action = Publish()
     carousal_message = CarousalMessage()
     element = CarousalElement(title="Morph.ai", sub_title="Experience the best",
-                              image_url="http://www.morph.ai/logo.jpg", click_url="http://www.morph.ai")
+                              image_url="https://res.cloudinary.com/crunchbase-production/image/upload/v1460728564/g0plluoyihiq8ap8pzp9.jpg",
+                              click_url="http://www.morph.ai")
     element.add_button(button=URLButton(title="Signup", url="app.morph.ai", height="TALL"))
     carousal_message.add_carousal_element(
         element)
+
+    element2 = CarousalElement(title="Payload button", sub_title="Showing how to create a card with payload button",
+                               image_url="https://res.cloudinary.com/crunchbase-production/image/upload/v1460728564/g0plluoyihiq8ap8pzp9.jpg",
+                               click_url="http://www.morph.ai")
+    element2.add_button(button=PostbackButton(title="Postback button", payload="payload_to_be_sent"))
+    carousal_message.add_carousal_element(element2)
     publish_action.add_message(carousal_message)
     return Response().add_action(publish_action).build()
 
