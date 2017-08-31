@@ -1,4 +1,5 @@
 import abc
+import json
 
 
 class Message:
@@ -142,7 +143,8 @@ class PostbackButton(Button):
         self.payload = payload
 
     def to_json(self):
-        attr = {'buttonType': self.button_type, 'payload': self.payload, 'title': self.title}
+        action_payload = [{'val': self.payload, 'ttl': self.title}]
+        attr = {'buttonType': self.button_type, 'payload': json.dumps(action_payload), 'title': self.title}
         return attr
 
 
