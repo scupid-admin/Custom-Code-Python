@@ -70,7 +70,7 @@ class MediaMessage(Message):
         self.media_type = media_type
 
     def to_json(self):
-        attr = {'messageType': self.message_type, 'mediaUrl': self.media_url, 'mediaType': self.message_type}
+        attr = {'messageType': self.message_type, 'mediaUrl': self.media_url, 'mediaType': self.media_type}
         self.add_suggestions_to_attr(attr)
         return attr
 
