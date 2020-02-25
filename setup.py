@@ -9,5 +9,5 @@ setup(
     url='https://github.com/scupid-admin/morph-python-sdk',
     download_url='https://github.com/scupid-admin/morph-python-sdk/archive/1.0.0.tar.gz',
     keywords=['chatbots', 'custom code', 'morph.ai'],
-    version="1.0.7"
+    version="1.0.8"
 )
